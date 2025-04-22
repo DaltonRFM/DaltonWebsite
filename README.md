@@ -1,6 +1,6 @@
 # Personal Website
 
-Hello KTP People reading this!
+Hello KTPeople reading this!
 
 This website will include 3 pages
 * Home
