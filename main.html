@@ -1,97 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title> <!-- This is the name at the top of the search bar -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
   <style>
-    
-    
+    :root {
+      --primary-color: #19d47d;
+      --accent-color: #007bff;
+      --bg-color: #f4f4f9;
+      --dark-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2CC295;
+      color: var(--dark-color);
     }
 
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+      background: var(--dark-color);
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
-      color: #fff;
-      margin: 0 15px;
+      color: white;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #19d47d; 
+      color: #00df81;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 1rem;
+      border: 4px solid  #2CC295;
+    }
+
+    .hero h2 {
+      margin-top: 1rem;
+      font-size: 1.75rem;
+      color: var(--dark-color);
     }
 
     main {
-      padding: 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
-    section {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
     }
 
-    section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    section h2 {
-      margin-top: 0;
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    section p, section a {
-      font-size: 1rem;
-      color: #555;
-    }
-
-    section a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    section a:hover {
-      color: #0056b3;
+    .card:hover {
+      transform: scale(1.015);
     }
 
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      margin-top: 20px;
+      padding: 1rem;
+      background: var(--dark-color);
+      color: white;
     }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+    
   </style>
 </head>
 <body>
+
   <header>
     <h1>Dalton Ford</h1>
     <nav>
@@ -100,21 +117,47 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
+  <section class="hero">
+    <h2>Welcome to My Website</h2>
+    <p>Studying Computer Science at the University of Colorado Boulder.</p>
+    <img src="DaltonPhoto.jpeg" alt="Dalton Ford">
+  </section>
+
   <main>
-    <p>Welcome to the official website of Kappa Theta Pi - Nu Chapter at the University of Colorado at Boulder! If this is your first time hearing about us – we’re a professional technology fraternity on campus, driven by a mission to secure tech jobs for all our members. Joining KTP means gaining access to various resources designed to help you succeed in the tech industry. We offer a variety of workshops, academic support, community events, and hands-on projects to launch your career. You’ll immerse yourself in a community of peers who share your passion whatever that passion may be! We pride ourselves in our diverse community with interests spanning from quantitative finance to data science to biomedical engineering.
-
-      We’re always looking to grow our membership! So many industries work closely with technology and there is no better time to get involved than today. Whether your passion lies in software engineering, design, or any other tech-related field, there’s a place for you at KTP. I encourage you to explore our website and Instagram to get to know our organization better. If you have any questions, please do not hesitate to contact us through a direct message or email, or arrange a coffee chat with any of our members. We want you to be part of our story and help us shape the future. I look forward to seeing you at our recruiting events!
-      
-      Wishing you nothing but the best and a warm welcome to KTP!
+    <div class="card">
+      <h3>Work Experience</h3>
+      <p>
+        Welcome to the official website of Kappa Theta Pi - Nu Chapter at the University of Colorado at Boulder! We're a professional technology fraternity focused on preparing students for careers in tech through workshops, projects, and a diverse, supportive community.
       </p>
+    </div>
 
-      <img src="DaltonPhoto.jpeg" alt="DaltonPhoto" width="250" height="250">
-      <!-- Fix this with a better quality image later -->
+    <div class="card">
+      <h3>Involvement</h3>
+      <p>
+        Passionate about software, design, or any tech-adjacent field? There's a place for you in KTP. We welcome students from all backgrounds—whether you're into data science, UX, biomedical engineering, or finance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Looking for</h3>
+      <p>
+        Check out our <a href="https://www.instagram.com" target="_blank">Instagram</a>, explore this site, or reach out for a coffee chat. We’d love to meet you and share what KTP can offer.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Contact Me</h3>
+      <p>
+        For any inquiries, feel free to reach out via email or connect with me on LinkedIn.
+      </p>
+      <a href="contact.html">Contact Me →</a>
+
   </main>
-
 
   <footer>
     <p>© 2025 Dalton Ford. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

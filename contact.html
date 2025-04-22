@@ -1,126 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Information</title>
   <style>
-    
+
+    :root {
+      --primary-color: #19d47d;
+      --accent-color: #007bff;
+      --bg-color: #f4f4f9;
+      --dark-color: #333;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2CC295;
+      color: var(--dark-color);
     }
 
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+      background: var(--dark-color);
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
-      color: #fff;
-      margin: 0 15px;
+      color: white;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #19d47d; 
+      color: var(--primary-color);
     }
 
     main {
-      padding: 20px;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 2rem auto;
+      padding: 1rem;
     }
 
-    section {
-      margin-bottom: 20px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
     }
 
-    section:hover {
+    .contact-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .contact-card:hover {
       transform: scale(1.02);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    section h2 {
+    .contact-card h2 {
       margin-top: 0;
-      font-size: 1.5rem;
-      color: #333;
+      font-size: 1.3rem;
     }
 
-    section p, section a {
+    .contact-card p, .contact-card a {
       font-size: 1rem;
       color: #555;
+      word-wrap: break-word;
     }
 
-    section a {
-      color: #007bff;
-      text-decoration: none;
+    .contact-card a {
+      color: var(--accent-color);
       font-weight: bold;
-      transition: color 0.3s ease;
+      text-decoration: none;
     }
 
-    section a:hover {
+    .contact-card a:hover {
       color: #0056b3;
     }
 
     footer {
       text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      margin-top: 20px;
+      padding: 1rem;
+      background-color: var(--dark-color);
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Contact Information</h1>
+    <h1>Contact Me</h1>
     <nav>
       <a href="main.html">Home</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
-    <section>
-      <h2>Phone Number</h2>
-      <p>(720)-828-0721</p>
-    </section>
-    <section>
-      <h2>Email</h2>
-      <p>dafo8331@colorado.edu</p>
-    </section>
-    <section>
-      <h2>LinkedIn</h2>
-      <a href="https://www.linkedin.com/in/dalton-ford8331/">Click here</a>
-    </section>
-    <section>
-      <h2>Github</h2>
-      <a href="https://github.com/DaltonRFM">Click here</a>
-    </section>
-    
-   
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h2>📞 Phone</h2>
+        <p>(720) 828-0721</p>
+      </div>
+
+      <div class="contact-card">
+        <h2>📧 Email</h2>
+        <p>dafo8331@colorado.edu</p>
+      </div>
+
+      <div class="contact-card">
+        <h2>💼 LinkedIn</h2>
+        <a href="https://www.linkedin.com/in/dalton-ford8331/" target="_blank">View Profile</a>
+      </div>
+
+      <div class="contact-card">
+        <h2>👨‍💻 GitHub</h2>
+        <a href="https://github.com/DaltonRFM" target="_blank">Visit GitHub</a>
+      </div>
+
+      <div class="contact-card">
+        <h2>🌐 Portfolio</h2>
+        <p>Check out my projects and skills.</p>
+        <a href="projects.html">View Projects</a>
+
+    </div>
   </main>
+
   <footer>
-    &copy; 2025 Dalton Ford. All rights reserved.
+    <p>© 2025 Dalton Ford. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
